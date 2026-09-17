@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "quote": "NAVIGO doesn't think like an agency. They operate like co-founders with an obsession for clean unit economics and world-class craft. They unlocked our GCC expansion seamlessly.",
+    "author": "Marcus Vance",
+    "role": "CEO & Founder",
+    "company": "Aurum Atelier",
+    "location": "Dubai, UAE",
+    "metric": "+340% YoY Revenue"
+  },
+  {
+    "id": "2",
+    "quote": "Within 90 days of deploying NAVIGO's enterprise acquisition engine, our sales team went from hunting leads to triaging qualified enterprise inquiries. The ROI is undisputed.",
+    "author": "Dr. Elena Rostova",
+    "role": "Chief Commercial Officer",
+    "company": "Veridian Health",
+    "location": "Boston, MA",
+    "metric": "$85M Enterprise Pipeline"
+  },
+  {
+    "id": "3",
+    "quote": "Their creative caliber matches luxury global fashion houses, yet their media spend is optimized with quantitative hedge fund precision. Rare and extraordinary partners.",
+    "author": "Jean-Luc Moreau",
+    "role": "Managing Partner",
+    "company": "Solaris Capital Partners",
+    "location": "Toronto, Canada",
+    "metric": "$620M Fund Closed"
+  }
+]

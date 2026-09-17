@@ -1,0 +1,53 @@
+[
+  {
+    "slug": "aurum-atelier",
+    "title": "Scaling Luxury Horology E-Commerce to $42M ARR",
+    "client": "Aurum Atelier",
+    "industry": "Luxury & Retail",
+    "market": "UAE",
+    "coverImage": "/images/work-aurum.jpg",
+    "results": [
+      { "label": "Revenue Growth", "value": "+340%" },
+      { "label": "Blended ROAS", "value": "6.8x" },
+      { "label": "Avg Order Value", "value": "$4,200" }
+    ],
+    "tagline": "Brand repositioning and high-net-worth acquisition architecture across Dubai & North America.",
+    "challenge": "Aurum Atelier had exquisite handcrafted timepieces but was suffering from rising customer acquisition costs and low digital trust among ultra-high-net-worth collectors in the GCC.",
+    "approach": "We engineered an editorial digital experience combined with private concierge remarketing flows, targeted search arbitrage, and cinematic programmatic media.",
+    "outcome": "In 14 months, direct-to-consumer sales grew from $9.5M to over $42M, establishing Aurum Atelier as a premier digital-first horology maison."
+  },
+  {
+    "slug": "veridian-health",
+    "title": "Dominating Enterprise Digital Health in North America",
+    "client": "Veridian Health",
+    "industry": "HealthTech & Enterprise",
+    "market": "US",
+    "coverImage": "/images/work-veridian.jpg",
+    "results": [
+      { "label": "Enterprise Pipeline", "value": "$85M+" },
+      { "label": "CAC Reduction", "value": "-52%" },
+      { "label": "Organic Inbound", "value": "+410%" }
+    ],
+    "tagline": "Outcome-driven demand generation and category positioning for healthcare SaaS.",
+    "challenge": "Veridian faced legacy enterprise incumbents with 10x marketing budgets and needed to capture hospital system procurement committees quickly.",
+    "approach": "We deployed an account-based growth framework, high-authority research papers, and technical SEO infrastructure converting hospital CIOs at peak decision cycles.",
+    "outcome": "Closed 28 Fortune 500 healthcare provider contracts within 3 quarters and cut sales cycle velocity by 38 days."
+  },
+  {
+    "slug": "solaris-capital",
+    "title": "Institutional Capital Acquisition for Greentech Infrastructure",
+    "client": "Solaris Capital Partners",
+    "industry": "FinTech & Climate",
+    "market": "Canada",
+    "coverImage": "/images/work-solaris.jpg",
+    "results": [
+      { "label": "Fund Commitments", "value": "$620M" },
+      { "label": "LP Engagement", "value": "+185%" },
+      { "label": "Global Reach", "value": "18 Countries" }
+    ],
+    "tagline": "Positioning sustainable infrastructure as high-yield institutional asset classes.",
+    "challenge": "Solaris was raising their flagship Fund II and required institutional grade positioning to attract sovereign wealth and family office allocations.",
+    "approach": "We created a data-dense interactive digital investor suite, combined with bespoke digital PR and precision LinkedIn executive thought-leadership syndication.",
+    "outcome": "Fund II was oversubscribed within 5 months, closing at $620M against a $500M target."
+  }
+]

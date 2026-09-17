@@ -1,0 +1,407 @@
+[
+  {
+    "id": "strategy",
+    "number": "01",
+    "title": "Brand Strategy",
+    "description": "We dissect customer psychology, competitive white spaces, and unit economics to architect category-defining brand narratives that justify premium valuations.",
+    "capabilities": [
+      {
+        "title": "Growth Strategy",
+        "description": "Our enterprise growth strategy frameworks identify untapped market opportunities. We analyze your customer acquisition cost (CAC) and lifetime value (LTV) to build scalable, predictable revenue engines that outperform competitors in the B2B and SaaS spaces."
+      },
+      {
+        "title": "Market Research",
+        "description": "In-depth consumer behavior analysis, competitor benchmarking, and market sizing. We provide data-driven insights that mitigate risk and uncover lucrative white spaces for your next product launch or market expansion."
+      },
+      {
+        "title": "Go-To-Market (GTM)",
+        "description": "Flawless go-to-market strategies for enterprise software, luxury e-commerce, and B2B services. We orchestrate pricing, product positioning, and channel distribution to ensure maximum impact and immediate market penetration upon launch."
+      },
+      {
+        "title": "Digital Transformation",
+        "description": "Comprehensive digital transformation consulting. We modernize legacy systems, integrate cutting-edge marketing technologies, and align your sales and marketing operations to thrive in a digital-first economy."
+      }
+    ],
+    "video": "/assets/services/brand-strategy.webm",
+    "seoMetaTitle": "Enterprise Growth Strategy & Market Research | NAVIGO",
+    "seoMetaDescription": "Category-defining brand narratives and go-to-market strategies for high-growth brands in the US, Canada, and UAE.",
+    "longDescription": "Our strategy practice doesn't just deliver a deck; we deliver a complete revenue architecture. We partner with founders and enterprise directors to engineer market dominance. By analyzing unit economics and competitive white spaces, we position your brand to command premium pricing and unshakeable customer loyalty.",
+    "benefits": [
+      "Premium Brand Positioning",
+      "Predictable Revenue Architecture",
+      "Competitive Moat Identification",
+      "Optimized Unit Economics"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Discovery & Audit",
+        "description": "Deep-dive analysis of your current market position, unit economics, and competitive landscape."
+      },
+      {
+        "step": "02",
+        "title": "Strategy Formulation",
+        "description": "Architecting the go-to-market plan, defining the brand narrative, and establishing absolute KPIs."
+      },
+      {
+        "step": "03",
+        "title": "Execution & Alignment",
+        "description": "Delivering actionable playbooks and aligning your internal teams for flawless market execution."
+      }
+    ]
+  },
+  {
+    "id": "growth",
+    "number": "02",
+    "title": "Performance Marketing",
+    "description": "Scale profitable growth through paid acquisition, full-funnel strategy, and conversion-focused campaigns engineered for compounding returns.",
+    "capabilities": [
+      {
+        "title": "Search Engine Optimization (SEO)",
+        "description": "Enterprise SEO services designed to dominate Google search results. We combine technical SEO architecture, high-intent keyword mapping, and authoritative link building to drive compounding organic traffic and qualified B2B leads."
+      },
+      {
+        "title": "Paid Media (PPC)",
+        "description": "High-ROI paid media management across Google Ads, LinkedIn Ads, and Meta. We leverage algorithmic bidding and granular audience targeting to lower your customer acquisition costs and scale enterprise lead generation."
+      },
+      {
+        "title": "Social Media Marketing",
+        "description": "Strategic B2B social media management and community building. We establish brand authority on LinkedIn and drive viral engagement on platforms like TikTok and Instagram, turning followers into high-ticket clients."
+      },
+      {
+        "title": "Conversion Rate Optimization (CRO)",
+        "description": "Data-driven CRO services to maximize your website's revenue potential. Through A/B testing, heat mapping, and user journey analysis, we systematically increase your lead conversion rates and e-commerce sales."
+      },
+      {
+        "title": "B2B Lead Generation",
+        "description": "End-to-end B2B lead generation systems. We build high-converting landing pages, deploy gated lead magnets, and execute account-based marketing (ABM) campaigns to fill your sales pipeline with qualified decision-makers."
+      },
+      {
+        "title": "Affiliate & Partner Marketing",
+        "description": "Scale revenue through strategic partnerships. We build and manage high-performing affiliate programs that leverage industry leaders to promote your brand on a performance basis."
+      }
+    ],
+    "video": "/assets/services/performance-marketing.webm",
+    "seoMetaTitle": "Performance Marketing & SEO Agency | NAVIGO",
+    "seoMetaDescription": "Scale profitable growth with our full-funnel performance marketing and technical SEO strategies. Serving enterprise brands globally.",
+    "longDescription": "Growth is not about spending budget; it's about algorithmic capital allocation. We combine technical SEO architecture with high-intent paid media to dominate auction spaces. Our conversion-focused campaigns ensure every touchpoint is engineered to generate highly qualified leads and compounding revenue returns.",
+    "benefits": [
+      "Lower Customer Acquisition Cost (CAC)",
+      "Compounding Organic Traffic",
+      "Higher Return on Ad Spend (ROAS)",
+      "Predictable Sales Pipeline"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Funnel Analysis",
+        "description": "Identifying drop-offs, auditing technical SEO, and analyzing historical ad performance."
+      },
+      {
+        "step": "02",
+        "title": "Campaign Engineering",
+        "description": "Building full-funnel paid and organic architectures optimized for your target audience."
+      },
+      {
+        "step": "03",
+        "title": "Algorithmic Scaling",
+        "description": "Aggressively scaling budget into winning ad sets while ruthlessly cutting underperforming channels."
+      }
+    ]
+  },
+  {
+    "id": "creative",
+    "number": "03",
+    "title": "Creative Production",
+    "description": "Produce cinematic visuals, conversion copywriting, and viral multi-channel creative that captivates audiences and stops the scroll.",
+    "capabilities": [
+      {
+        "title": "Luxury Branding",
+        "description": "Award-winning brand identity design for luxury, tech, and enterprise companies. We craft cohesive visual systems, including logo design, typography, and brand guidelines that exude trust and premium positioning."
+      },
+      {
+        "title": "Content Creation",
+        "description": "High-quality content marketing that educates and converts. From authoritative whitepapers and SEO blog posts to viral short-form social content, we establish your brand as an undisputed industry thought leader."
+      },
+      {
+        "title": "Video Production",
+        "description": "Cinematic video production and 3D motion graphics. We produce high-converting video ads, corporate brand films, and product explainers that captivate audiences and drive massive engagement."
+      },
+      {
+        "title": "Creative Campaigns",
+        "description": "Omnichannel creative campaigns that cut through the noise. We concept and execute viral marketing initiatives that drive brand awareness and generate explosive demand in the US, Canada, and UAE markets."
+      },
+      {
+        "title": "Influencer Marketing",
+        "description": "Strategic influencer and creator partnerships. We align your brand with high-authority voices to reach untapped audiences, leveraging authentic social proof to drive enterprise sales and B2C conversions."
+      },
+      {
+        "title": "Art Direction & Photography",
+        "description": "High-end commercial photography and styling. We produce editorial-grade imagery that elevates your brand aesthetic and perfectly complements your digital and physical marketing collateral."
+      }
+    ],
+    "video": "/assets/services/creative-content.webm",
+    "seoMetaTitle": "Premium Creative Campaigns & Video Production | NAVIGO",
+    "seoMetaDescription": "Cinematic visuals, luxury branding, and viral creative campaigns designed to captivate high-intent audiences and drive enterprise conversions.",
+    "longDescription": "Creative engineered to convert. We pair commercial-grade art direction with algorithmic insights to produce cinematic assets that command attention. From high-end video production to comprehensive brand identity systems, our creative output serves as proof of your brand's premium market position.",
+    "benefits": [
+      "Higher Engagement Rates",
+      "Premium Brand Perception",
+      "Viral Organic Reach",
+      "Increased Conversion Rates"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Concept & Storyboarding",
+        "description": "Translating strategic positioning into powerful, emotion-evoking visual concepts."
+      },
+      {
+        "step": "02",
+        "title": "Production & Art Direction",
+        "description": "Executing high-end shoots, 3D motion design, and copywriting with absolute precision."
+      },
+      {
+        "step": "03",
+        "title": "Post-Production & Delivery",
+        "description": "Final grading, sound design, and formatting assets perfectly across all digital channels."
+      }
+    ]
+  },
+  {
+    "id": "digital",
+    "number": "04",
+    "title": "Digital Experiences",
+    "description": "Architect ultra-fast, high-converting digital flagships and bespoke web applications crafted with precision engineering and fluid interactivity.",
+    "capabilities": [
+      {
+        "title": "Awwwards-Level Web Design",
+        "description": "Bespoke, immersive web design that wins awards and drives revenue. We leverage WebGL, GSAP animations, and modern UI/UX principles to create digital experiences that leave a lasting impression on your high-ticket clients."
+      },
+      {
+        "title": "Custom Web Development",
+        "description": "Enterprise-grade web development using Next.js, React, and modern headless architectures. We build highly scalable, sub-second loading websites that dominate Core Web Vitals and organic search rankings."
+      },
+      {
+        "title": "Headless E-commerce",
+        "description": "High-performance headless e-commerce solutions for luxury brands. We integrate Shopify Plus with custom front-ends to deliver lightning-fast shopping experiences that drastically improve conversion rates."
+      },
+      {
+        "title": "Mobile App Development",
+        "description": "Native and cross-platform mobile app development for iOS and Android. We build sleek, intuitive, and highly functional mobile applications using React Native that keep your users engaged."
+      },
+      {
+        "title": "UI/UX Design",
+        "description": "Data-driven UI/UX design services. We wireframe user journeys and design intuitive interfaces that reduce friction, increase user retention, and maximize the lifetime value of your digital products."
+      },
+      {
+        "title": "WebGL & 3D Experiences",
+        "description": "Pushing the boundaries of the browser. We engineer custom Three.js and WebGL experiences that offer immersive product configurators and interactive visual storytelling."
+      }
+    ],
+    "video": "/assets/services/web-experience.webm",
+    "seoMetaTitle": "Awwwards-Level Web Design & Development | NAVIGO",
+    "seoMetaDescription": "We build ultra-fast, high-converting digital flagships, e-commerce platforms, and bespoke web apps with precision engineering and interactive WebGL.",
+    "longDescription": "Your website is your ultimate salesperson. We build headless, sub-second digital flagships using Next.js, React, and Three.js. Our digital experiences bridge the gap between Awwwards-level aesthetic execution and rigorous conversion rate optimization, ensuring your online presence is both beautiful and structurally dominant.",
+    "benefits": [
+      "Sub-Second Load Times",
+      "Seamless Cross-Device UX",
+      "Higher Conversion Rates",
+      "Awwwards-Level Aesthetics"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "UX/UI Architecture",
+        "description": "Wireframing user journeys and designing high-fidelity, interactive design systems."
+      },
+      {
+        "step": "02",
+        "title": "WebGL & Creative Coding",
+        "description": "Developing smooth scroll experiences, 3D elements, and micro-interactions."
+      },
+      {
+        "step": "03",
+        "title": "Performance Optimization",
+        "description": "Rigorous Lighthouse testing, technical SEO setup, and headless deployment."
+      }
+    ]
+  },
+  {
+    "id": "automation",
+    "number": "05",
+    "title": "Marketing Automation",
+    "description": "Build automated lifecycle journeys, retention engines, and CRM systems that personalize every customer touchpoint and maximize lifetime value.",
+    "capabilities": [
+      {
+        "title": "CRM Automation",
+        "description": "Enterprise CRM implementation and automation via HubSpot, Salesforce, and GoHighLevel. We streamline your sales pipelines and eliminate manual data entry, enabling your sales team to close deals faster."
+      },
+      {
+        "title": "Email Marketing Automation",
+        "description": "Advanced email marketing and lifecycle automation. We build complex drip campaigns, cart abandonment sequences, and personalized newsletters that maximize customer retention and drive repeat purchases."
+      },
+      {
+        "title": "WhatsApp Marketing",
+        "description": "High-conversion WhatsApp marketing automation. Reach your customers instantly where they spend their time with automated transactional updates, promotional broadcasts, and interactive conversational flows."
+      },
+      {
+        "title": "Sales Automation",
+        "description": "B2B sales automation that scales your outreach. We set up automated meeting scheduling, AI-driven follow-ups, and lead scoring systems that surface your most qualified prospects automatically."
+      },
+      {
+        "title": "Marketing Operations",
+        "description": "Seamless integration of your entire marketing tech stack (MarTech). We connect your ad platforms, CRM, and analytics tools via Zapier and custom APIs to ensure flawless data flow and marketing efficiency."
+      },
+      {
+        "title": "Customer Success Automation",
+        "description": "Automate onboarding and retention. We design post-purchase journeys that educate customers, encourage product adoption, and automatically trigger upsell opportunities at the perfect moment."
+      }
+    ],
+    "video": "/assets/services/automation-marketing.webm",
+    "seoMetaTitle": "Enterprise Marketing & CRM Automation | NAVIGO",
+    "seoMetaDescription": "Maximize customer lifetime value with automated lifecycle journeys, CRM architecture, and hyper-personalized email & WhatsApp marketing.",
+    "longDescription": "We turn leaky funnels into high-efficiency compound revenue engines. By orchestrating complex CRM automations and multi-touch sequences across Email, SMS, and WhatsApp, we ensure your sales team accelerates pipeline velocity while marketing nurtures prospects with hyper-personalized, timely touchpoints.",
+    "benefits": [
+      "Maximized Customer LTV",
+      "Reduced Client Churn",
+      "Shorter Sales Cycles",
+      "24/7 Automated Nurturing"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "CRM Mapping",
+        "description": "Auditing your current tech stack and mapping out ideal customer lifecycle journeys."
+      },
+      {
+        "step": "02",
+        "title": "Workflow Architecture",
+        "description": "Building complex, logic-based automations across email, SMS, and sales pipelines."
+      },
+      {
+        "step": "03",
+        "title": "Trigger Optimization",
+        "description": "A/B testing subject lines, delays, and dynamic content to maximize open and reply rates."
+      }
+    ]
+  },
+  {
+    "id": "ai",
+    "number": "06",
+    "title": "Artificial Intelligence",
+    "description": "Deploy intelligent agents, predictive chatbots, and algorithmic lead qualification to scale your operations and accelerate enterprise sales cycles.",
+    "capabilities": [
+      {
+        "title": "AI Autonomous Agents",
+        "description": "Custom LLM-powered AI agents built for enterprise support and sales. These autonomous systems learn your company's knowledge base to instantly resolve queries and book meetings 24/7 without human intervention."
+      },
+      {
+        "title": "AI Chatbot Development",
+        "description": "Intelligent, conversational AI chatbots deployed across your website, WhatsApp, and social channels. We build bots that understand context and intent, drastically improving customer satisfaction and lead capture."
+      },
+      {
+        "title": "Algorithmic Lead Qualification",
+        "description": "Stop wasting time on unqualified leads. We implement AI models that analyze incoming inquiries in real-time, scoring and routing high-ticket prospects directly to your top closers."
+      },
+      {
+        "title": "Hyper-Personalization",
+        "description": "AI-driven website and email personalization. Deliver unique digital experiences tailored to each user's behavioral data and firmographics, significantly boosting B2B conversion rates."
+      },
+      {
+        "title": "AI Marketing Analytics",
+        "description": "Leverage machine learning to predict market trends and customer churn. Our AI analytics solutions turn massive datasets into actionable, forward-looking insights for C-suite executives."
+      },
+      {
+        "title": "Generative Content Systems",
+        "description": "Scale your content output effortlessly. We build bespoke generative AI pipelines that automatically draft, format, and optimize brand-compliant content for SEO and social media."
+      }
+    ],
+    "video": "/assets/services/analytics-ai.webm",
+    "seoMetaTitle": "AI Agents & Predictive Marketing Solutions | NAVIGO",
+    "seoMetaDescription": "Accelerate enterprise sales cycles with AI chatbots, algorithmic lead qualification, and predictive marketing intelligence.",
+    "longDescription": "The future of marketing is algorithmic. We deploy bespoke AI agents and intelligent chatbots designed to instantly qualify leads, hyper-personalize user experiences, and drastically reduce your enterprise sales cycle length. Leverage machine learning to scale your customer interactions without sacrificing the premium touch.",
+    "benefits": [
+      "Instant Lead Qualification",
+      "Scalable Personalization",
+      "Reduced Operational Costs",
+      "Predictive Analytics Insights"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Data Ingestion",
+        "description": "Feeding your company knowledge base, brand voice, and FAQs into custom LLMs."
+      },
+      {
+        "step": "02",
+        "title": "Model Training & Setup",
+        "description": "Configuring the AI agent to handle objections, qualify intent, and schedule meetings."
+      },
+      {
+        "step": "03",
+        "title": "Seamless Integration",
+        "description": "Deploying the agent onto your website and connecting it directly to your CRM."
+      }
+    ]
+  },
+  {
+    "id": "data",
+    "number": "07",
+    "title": "Data Analytics",
+    "description": "Turn raw telemetry into predictive growth levers with full-funnel attribution, custom executive dashboards, and marketing intelligence.",
+    "capabilities": [
+      {
+        "title": "Advanced Web Analytics",
+        "description": "Flawless Google Analytics 4 (GA4) and Adobe Analytics setups. We ensure your tracking architecture captures every micro-conversion, providing absolute clarity on user behavior and campaign performance."
+      },
+      {
+        "title": "Multi-Touch Attribution",
+        "description": "Solve the B2B attribution problem. We implement sophisticated multi-touch attribution models to reveal exactly which channels and touchpoints are driving your enterprise pipeline."
+      },
+      {
+        "title": "Executive BI Dashboards",
+        "description": "Custom Business Intelligence (BI) dashboards using Looker Studio and Tableau. Get real-time visibility into your CAC, LTV, ROAS, and overall marketing ROI in one beautiful, centralized view."
+      },
+      {
+        "title": "Server-Side Tracking",
+        "description": "Future-proof your data collection. We deploy server-side tagging and Conversion APIs (CAPI) for Meta and Google to bypass ad blockers and ensure 100% accurate signal tracking in a cookieless world."
+      },
+      {
+        "title": "Marketing Intelligence",
+        "description": "Deep-dive data audits and competitive intelligence reporting. We transform raw telemetry into strategic growth levers, allowing marketing directors to make confident, data-backed budget allocations."
+      },
+      {
+        "title": "CDP Implementation",
+        "description": "Unify your customer data. We implement Customer Data Platforms (CDP) like Segment to consolidate data from every touchpoint, creating a single source of truth for your entire organization."
+      }
+    ],
+    "video": "/assets/services/seo.webm",
+    "seoMetaTitle": "Full-Funnel Attribution & Marketing Intelligence | NAVIGO",
+    "seoMetaDescription": "Server-side tracking, multi-touch attribution, and custom executive dashboards. Turn raw marketing data into predictive growth levers.",
+    "longDescription": "You cannot scale what you cannot measure. We implement bulletproof server-side tracking (CAPI), multi-touch attribution models, and bespoke executive dashboards. We give founders and marketing directors absolute clarity on unit economics, allowing them to make confident, data-backed decisions that drive scale.",
+    "benefits": [
+      "Absolute Marketing Clarity",
+      "Accurate ROI Attribution",
+      "Executive Visibility",
+      "Data-Driven Decisions"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Tracking Implementation",
+        "description": "Setting up robust Server-Side Tagging and Conversion APIs to bypass ad blockers."
+      },
+      {
+        "step": "02",
+        "title": "Attribution Modeling",
+        "description": "Creating multi-touch models that accurately credit every channel in the buyer journey."
+      },
+      {
+        "step": "03",
+        "title": "Dashboard Engineering",
+        "description": "Building beautiful, real-time executive dashboards to visualize your most critical KPIs."
+      }
+    ]
+  }
+]

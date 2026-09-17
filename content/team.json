@@ -1,0 +1,26 @@
+[
+  {
+    "id": "alex-reid",
+    "name": "Alexander Reid",
+    "role": "Managing Partner & Strategic Director",
+    "market": "New York / Dubai",
+    "bio": "Former Head of Growth at Tier 1 VC portfolio brands. 12+ years orchestrating brand repositioning and $500M+ in collective digital revenue scale.",
+    "specialty": "Go-To-Market & Capital Positioning"
+  },
+  {
+    "id": "samira-khalil",
+    "name": "Samira Al-Khalil",
+    "role": "Executive Creative Director",
+    "market": "Dubai / London",
+    "bio": "Award-winning creative technologist previously leading visual direction for luxury houses in Paris, Zurich, and the Middle East.",
+    "specialty": "Awwwards-Tier Creative & Motion Systems"
+  },
+  {
+    "id": "devon-vance",
+    "name": "Devon Vance",
+    "role": "Head of Quantitative Media & Growth",
+    "market": "San Francisco / Toronto",
+    "bio": "Data engineer turned algorithmic media buyer managing $80M+ in annualized performance capital across Google, Meta, and programmatic exchanges.",
+    "specialty": "Algorithmic Media & Attribution Telemetry"
+  }
+]
