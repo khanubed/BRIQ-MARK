@@ -17,22 +17,24 @@ export function CTASection({ theme = "dark" }: CTASectionProps) {
   
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [displayText, setDisplayText] = useState(PHRASES[0]);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const scrambleRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const intervalRef = useRef<number | null>(null);
+  const scrambleRef = useRef<number | null>(null);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
+    intervalRef.current = window.setInterval(() => {
       setPhraseIndex((prev) => (prev + 1) % PHRASES.length);
     }, 3500);
-    return () => clearInterval(intervalRef.current);
+    return () => {
+      if (intervalRef.current) window.clearInterval(intervalRef.current);
+    };
   }, []);
 
   useEffect(() => {
     let iteration = 0;
     const targetText = PHRASES[phraseIndex];
-    clearInterval(scrambleRef.current);
+    if (scrambleRef.current) window.clearInterval(scrambleRef.current);
     
-    scrambleRef.current = setInterval(() => {
+    scrambleRef.current = window.setInterval(() => {
       setDisplayText((prev) => {
         const currentLength = Math.max(prev.length, targetText.length);
         const next = Array.from({ length: currentLength })
@@ -45,7 +47,7 @@ export function CTASection({ theme = "dark" }: CTASectionProps) {
           .join("");
           
         if (iteration >= currentLength) {
-          clearInterval(scrambleRef.current);
+          if (scrambleRef.current) window.clearInterval(scrambleRef.current);
           return targetText;
         }
         return next;
@@ -53,7 +55,9 @@ export function CTASection({ theme = "dark" }: CTASectionProps) {
       iteration += 1 / 2.5; // Controls speed of reveal
     }, 30);
     
-    return () => clearInterval(scrambleRef.current);
+    return () => {
+      if (scrambleRef.current) window.clearInterval(scrambleRef.current);
+    };
   }, [phraseIndex]);
 
   // Cursor Logic
