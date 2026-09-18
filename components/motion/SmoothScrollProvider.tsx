@@ -65,11 +65,11 @@ export default function SmoothScrollProvider({
       lenisInstance.scrollTo(0, { immediate: true });
     }
     ScrollTrigger.refresh(true);
-    
+
     // Fallback refresh for React 18 / NextJS suspense boundaries
     const timeoutIds = [
       setTimeout(() => ScrollTrigger.refresh(true), 150),
-      setTimeout(() => ScrollTrigger.refresh(true), 500)
+      setTimeout(() => ScrollTrigger.refresh(true), 500),
     ];
     return () => timeoutIds.forEach(clearTimeout);
   }, [pathname, lenisInstance]);

@@ -4,7 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 import { useAppDispatch } from "../../store/hooks";
-import { setWebglSupported, setHeroInView } from "../../store/slices/performanceSlice";
+import {
+  setWebglSupported,
+  setHeroInView,
+} from "../../store/slices/performanceSlice";
 
 export default function Hero3D() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -38,7 +41,7 @@ export default function Hero3D() {
       45,
       container.clientWidth / container.clientHeight,
       0.1,
-      100
+      100,
     );
     camera.position.z = 6;
 
@@ -109,7 +112,7 @@ export default function Hero3D() {
         isVisible = entry.isIntersecting;
         dispatch(setHeroInView(entry.isIntersecting));
       },
-      { threshold: 0.05 }
+      { threshold: 0.05 },
     );
     observer.observe(container);
 

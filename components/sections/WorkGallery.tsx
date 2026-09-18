@@ -27,63 +27,18 @@ const CylinderGallery = dynamic(
   }
 );
 
+import caseStudies from "../../content/case-studies.json";
+
 // 2. Map NAVIGO client case studies & high-res mockups into the 3D items prop
-export const SHOWCASE_PROJECTS: CylinderGalleryItem[] = [
-  {
-    id: "carepulse",
-    title: "CarePulse Health",
-    image: "/images/work/carepulse.jpg",
-    domain: "carepulse.health",
-    category: "Healthcare Tech",
-    link: "/work/carepulse-health",
-    slug: "carepulse-health",
-  },
-  {
-    id: "aurum",
-    title: "Aurum Atelier Maison",
-    image: "/images/work/aurum.jpg",
-    domain: "aurumatelier.ae",
-    category: "Luxury Horology",
-    link: "/work/aurum-atelier",
-    slug: "aurum-atelier",
-  },
-  {
-    id: "a2z",
-    title: "A2Z Auto Parts Trade Desk",
-    image: "/images/work/a2z.jpg",
-    domain: "a2zautoparts.com",
-    category: "Automotive Commerce",
-    link: "/work/a2z-autoparts",
-    slug: "a2z-autoparts",
-  },
-  {
-    id: "solaris",
-    title: "Solaris Capital Partners",
-    image: "/images/work/solaris.jpg",
-    domain: "solariscapital.ca",
-    category: "FinTech & Climate",
-    link: "/work/solaris-capital",
-    slug: "solaris-capital",
-  },
-  {
-    id: "lumina",
-    title: "Lumina Scent Lab",
-    image: "/images/work/lumina.jpg",
-    domain: "luminascent.com",
-    category: "Luxury DTC & Retail",
-    link: "/work/lumina-commerce",
-    slug: "lumina-commerce",
-  },
-  {
-    id: "growthos",
-    title: "GrowthOS Engine",
-    image: "/images/work/growthos.jpg",
-    domain: "growthos.ai",
-    category: "AI Marketing Infrastructure",
-    link: "/work/growthos-ai",
-    slug: "growthos-ai",
-  },
-];
+export const SHOWCASE_PROJECTS: CylinderGalleryItem[] = caseStudies.map(study => ({
+  id: study.slug,
+  title: study.title,
+  image: study.coverImage,
+  domain: study.client.toLowerCase().replace(/\s+/g, '') + '.com',
+  category: study.industry,
+  link: `/work/${study.slug}`,
+  slug: study.slug,
+}));
 
 interface WorkGalleryProps {
   items?: CylinderGalleryItem[];

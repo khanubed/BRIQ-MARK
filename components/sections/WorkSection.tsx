@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
+import { WaterImage } from "../ui/WaterImage";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -13,103 +14,25 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-export interface WorkProject {
-  id: string;
-  number: string;
-  title: string;
-  client: string;
-  category: string;
-  market: string;
-  image: string;
-  slug: string;
-  metricValue: string;
-  metricLabel: string;
-  accentColor: string;
-}
+import caseStudies from "../../content/case-studies.json";
 
-const COLUMN_1_PROJECTS: WorkProject[] = [
-  {
-    id: "carepulse",
-    number: "01",
-    title: "Telehealth Infrastructure & Acquisition at Scale",
-    client: "CarePulse Health",
-    category: "Healthcare Tech",
-    market: "United States",
-    image: "/images/work/carepulse.jpg",
-    slug: "carepulse-health",
-    metricValue: "$140M+",
-    metricLabel: "Validated Pipeline",
-    accentColor: "#38BDF8",
-  },
-  {
-    id: "aurum",
-    number: "02",
-    title: "Luxury Horology Maison E-Commerce Flagship",
-    client: "Aurum Atelier",
-    category: "Luxury Horology",
-    market: "Dubai, UAE",
-    image: "/images/work/aurum.jpg",
-    slug: "aurum-atelier",
-    metricValue: "$42M",
-    metricLabel: "Annual Run-Rate",
-    accentColor: "#F59E0B",
-  },
-  {
-    id: "a2z",
-    number: "03",
-    title: "High-Frequency B2B Auto Parts Trade Desk",
-    client: "A2Z Autoparts",
-    category: "Automotive Commerce",
-    market: "Canada & US",
-    image: "/images/work/a2z.jpg",
-    slug: "a2z-autoparts",
-    metricValue: "$84M",
-    metricLabel: "First-Year GMV",
-    accentColor: "#FF7A59",
-  },
-];
+// We'll map the case studies into the WorkProject format expected by WorkSection
+const mappedProjects = caseStudies.map((study, idx) => ({
+  id: study.slug,
+  number: String(idx + 1).padStart(2, '0'),
+  title: study.title,
+  client: study.client,
+  category: study.industry,
+  market: study.market,
+  image: study.coverImage,
+  slug: study.slug,
+  metricValue: study.results[0]?.value || "-",
+  metricLabel: study.results[0]?.label || "-",
+  accentColor: idx % 2 === 0 ? "#F59E0B" : "#38BDF8", // Alternate colors for ambient glow
+}));
 
-const COLUMN_2_PROJECTS: WorkProject[] = [
-  {
-    id: "solaris",
-    number: "04",
-    title: "Institutional Greentech Fund Platform",
-    client: "Solaris Capital Partners",
-    category: "FinTech & Climate",
-    market: "Canada",
-    image: "/images/work/solaris.jpg",
-    slug: "solaris-capital",
-    metricValue: "$620M",
-    metricLabel: "Fund Commitments",
-    accentColor: "#10B981",
-  },
-  {
-    id: "lumina",
-    number: "05",
-    title: "Vogue-Caliber Olfactory DTC Flagship",
-    client: "Lumina Scent Lab",
-    category: "Luxury DTC & Retail",
-    market: "United States",
-    image: "/images/work/lumina.jpg",
-    slug: "lumina-commerce",
-    metricValue: "+128%",
-    metricLabel: "Conversion Lift",
-    accentColor: "#E2B887",
-  },
-  {
-    id: "growthos",
-    number: "06",
-    title: "Autonomous Attribution & Media Desk",
-    client: "GrowthOS Engine",
-    category: "AI Marketing Infrastructure",
-    market: "Global / Enterprise",
-    image: "/images/work/growthos.jpg",
-    slug: "growthos-ai",
-    metricValue: "$180M+",
-    metricLabel: "Ad Spend Orchestrated",
-    accentColor: "#D946EF",
-  },
-];
+const COLUMN_1_PROJECTS = mappedProjects.filter((_, i) => i % 2 === 0);
+const COLUMN_2_PROJECTS = mappedProjects.filter((_, i) => i % 2 === 1);
 
 export function WorkSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -141,7 +64,7 @@ export function WorkSection() {
                 end: "bottom top",
                 scrub: 1.2,
               },
-            }
+            },
           );
         }
 
@@ -159,7 +82,7 @@ export function WorkSection() {
                 end: "bottom top",
                 scrub: 1.5,
               },
-            }
+            },
           );
         }
       });
@@ -168,7 +91,7 @@ export function WorkSection() {
         mm.revert();
       };
     },
-    { scope: sectionRef, dependencies: [prefersReduced] }
+    { scope: sectionRef, dependencies: [prefersReduced] },
   );
 
   return (
@@ -183,7 +106,6 @@ export function WorkSection() {
             LEFT COLUMN (Sticky / Editorial Heading Above the Left Ball)
             ========================================================================= */}
         <div className="lg:col-span-5 flex flex-col items-start lg:sticky lg:top-32 z-20 space-y-8">
-
           {/* Awwwards-Level Monumental Heading */}
           <div ref={stickyHeaderRef} className="space-y-4">
             <h2 className="text-4xl sm:text-6xl xl:text-7xl font-archivo  tracking-tight leading-[0.96] text-white">
@@ -211,7 +133,10 @@ export function WorkSection() {
             ========================================================================= */}
         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-8 xl:gap-10 items-start relative z-20">
           {/* COLUMN 1: 3 Projects (Normal Velocity) */}
-          <div ref={col1Ref} className="flex flex-col gap-8 xl:gap-12 will-change-transform">
+          <div
+            ref={col1Ref}
+            className="flex flex-col gap-8 xl:gap-12 will-change-transform"
+          >
             {COLUMN_1_PROJECTS.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
@@ -240,12 +165,10 @@ function ProjectCard({ project }: { project: WorkProject }) {
     >
       {/* 1. Project Image Container (Aspect 4:3 or 16:11) */}
       <div className="relative w-full aspect-[16/11] overflow-hidden bg-neutral-950">
-        <Image
+        <WaterImage
           src={project.image}
           alt={`${project.client} - ${project.title}`}
-          fill
-          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 35vw, 25vw"
+          className="absolute inset-0 w-full h-full"
         />
 
         {/* Ambient Color Reflection Gradient */}

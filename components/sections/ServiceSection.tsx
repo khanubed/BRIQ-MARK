@@ -213,8 +213,8 @@ export function ServiceSection() {
         // 2.5 Scroll-Scrubbed Parallax for the Headline
         if (headlineRef.current) {
           gsap.to(headlineRef.current, {
-            y: 150,
-            opacity: 0.5,
+            y: 40,
+            opacity: 0.1,
             scrollTrigger: {
               trigger: headlineTriggerRef.current,
               start: "top 30%",

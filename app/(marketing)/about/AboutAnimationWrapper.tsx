@@ -1,0 +1,94 @@
+"use client";
+
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
+export function AboutAnimationWrapper({ children }: { children: React.ReactNode }) {
+  const mainRef = useRef<HTMLElement>(null);
+
+  useGSAP(() => {
+    // 1. Hero Stagger
+    const heroWords = mainRef.current?.querySelectorAll(".hero-title .reveal-word");
+    if (heroWords && heroWords.length > 0) {
+      gsap.to(heroWords, {
+        y: 0,
+        opacity: 1,
+        rotate: 0,
+        duration: 1.4,
+        stagger: 0.08,
+        ease: "expo.out",
+        delay: 0.1,
+      });
+    }
+
+    // 2. Scroll Triggered Animated Text (Standard)
+    const textContainers = mainRef.current?.querySelectorAll(".animated-text-container:not(.hero-title)");
+    textContainers?.forEach((container) => {
+      const words = container.querySelectorAll(".reveal-word");
+      if (words.length > 0) {
+        gsap.to(words, {
+          y: 0,
+          opacity: 1,
+          rotate: 0,
+          duration: 1.2,
+          stagger: 0.015,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: container,
+            start: "top 85%",
+          }
+        });
+      }
+    });
+
+    // 3. Grid Rows Reveal (For principles & team)
+    const gridRows = mainRef.current?.querySelectorAll(".reveal-row");
+    gridRows?.forEach((row) => {
+      gsap.fromTo(
+        row,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: row,
+            start: "top 85%",
+          }
+        }
+      );
+    });
+
+    // 4. Parallax Media
+    const parallaxMedia = mainRef.current?.querySelectorAll(".parallax-media");
+    parallaxMedia?.forEach((media) => {
+      gsap.fromTo(
+        media,
+        { yPercent: -15 },
+        {
+          yPercent: 15,
+          ease: "none",
+          scrollTrigger: {
+            trigger: media.parentElement,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          }
+        }
+      );
+    });
+  }, { scope: mainRef });
+
+  return (
+    <main ref={mainRef} className="flex-1 bg-[#0A0A0A] text-white min-h-screen pt-32 sm:pt-48 selection:bg-white selection:text-black">
+      {children}
+    </main>
+  );
+}

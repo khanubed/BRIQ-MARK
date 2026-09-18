@@ -84,6 +84,25 @@ export function ServicesAnimationWrapper({ children }: { children: React.ReactNo
         }
       );
     });
+
+    // 5. Parallax Media
+    const parallaxMedia = mainRef.current?.querySelectorAll(".parallax-media");
+    parallaxMedia?.forEach((media) => {
+      gsap.fromTo(
+        media,
+        { yPercent: -15 },
+        {
+          yPercent: 15,
+          ease: "none",
+          scrollTrigger: {
+            trigger: media.parentElement,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          }
+        }
+      );
+    });
   }, { scope: mainRef });
 
   return (

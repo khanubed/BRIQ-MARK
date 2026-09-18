@@ -72,16 +72,7 @@ export function NarrativeSection() {
         });
       }
 
-      // 2.5 Pin the Service Section momentarily when it hits the top
-      if (serviceWrapperRef.current) {
-        ScrollTrigger.create({
-          trigger: serviceWrapperRef.current,
-          start: "top top",
-          end: "+=50%", // Give it a 50vh pause/dwell
-          pin: true,
-          pinSpacing: true,
-        });
-      }
+      // (Removed Service Section Pin to prevent nested pinning conflicts with internal ServiceSection animations)
 
       // 3. Transition from ServiceSection (Right) -> WorkSection (Left):
       // As requested: Ball transitions from Right side back to Left side,

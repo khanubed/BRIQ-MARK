@@ -1,141 +1,135 @@
 "use client";
 
+import React, { useRef } from "react";
 import Link from "next/link";
-import { ArrowUpRight, TrendingUp } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { CaseStudy } from "../../lib/cms";
-import { Card } from "../ui/Card";
-import { Badge } from "../ui/Badge";
-import { Button } from "../ui/Button";
-import { RevealOnScroll } from "../motion/RevealOnScroll";
-import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import {
-  setSelectedMarket,
-  setSelectedIndustry,
-} from "../../store/slices/workSlice";
+import { WaterImage } from "../ui/WaterImage";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import { useReducedMotion } from "../../hooks/useReducedMotion";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 interface WorkPreviewProps {
   initialCaseStudies: CaseStudy[];
 }
 
 export function WorkPreview({ initialCaseStudies }: WorkPreviewProps) {
-  const dispatch = useAppDispatch();
-  const selectedMarket = useAppSelector((state) => state.work.selectedMarket);
-  const selectedIndustry = useAppSelector(
-    (state) => state.work.selectedIndustry,
+  const containerRef = useRef<HTMLDivElement>(null);
+  const col1Ref = useRef<HTMLDivElement>(null);
+  const col2Ref = useRef<HTMLDivElement>(null);
+  const prefersReduced = useReducedMotion();
+
+  // Split into two columns
+  const col1Projects = initialCaseStudies.filter((_, i) => i % 2 === 0);
+  const col2Projects = initialCaseStudies.filter((_, i) => i % 2 === 1);
+
+  useGSAP(
+    () => {
+      if (prefersReduced) return;
+
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 1024px)", () => {
+        // Parallax effect on the second column
+        if (col1Ref.current && col2Ref.current) {
+          gsap.fromTo(
+            col2Ref.current,
+            { y: 0 },
+            {
+              y: -800, // Moves up significantly faster as you scroll down
+              ease: "none",
+              scrollTrigger: {
+                trigger: containerRef.current,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1.2,
+              },
+            },
+          );
+        }
+      });
+
+      return () => {
+        mm.revert();
+      };
+    },
+    { scope: containerRef, dependencies: [prefersReduced] }
   );
 
-  const filteredStudies = initialCaseStudies.filter((study) => {
-    const marketMatch =
-      selectedMarket === "all" || study.market === selectedMarket;
-    const industryMatch =
-      selectedIndustry === "all" || study.industry === selectedIndustry;
-    return marketMatch && industryMatch;
-  });
-
-  const industries = [
-    "all",
-    ...Array.from(new Set(initialCaseStudies.map((s) => s.industry))),
-  ];
-
   return (
-    <section className="py-24 px-6 bg-black/30 backdrop-blur-[2px] border-t border-neutral-800/60">
-      <div className="max-w-7xl mx-auto space-y-16">
-        {/* Header and Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-          <RevealOnScroll className="max-w-xl space-y-4">
-            <Badge variant="gold">PROVEN OUTCOMES</Badge>
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Selected Engagements & Documented Transformations.
-            </h2>
-          </RevealOnScroll>
-
-          {/* Market Filter Chips (US, Canada, UAE) */}
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-mono uppercase text-neutral-500 mr-2">
-              Market:
-            </span>
-            {(["all", "US", "Canada", "UAE"] as const).map((mkt) => (
-              <button
-                key={mkt}
-                onClick={() => dispatch(setSelectedMarket(mkt))}
-                className={`text-xs px-3 py-1.5 rounded-full font-mono transition-all cursor-pointer ${
-                  selectedMarket === mkt
-                    ? "bg-amber-400 text-black font-semibold"
-                    : "bg-neutral-900 text-neutral-400 hover:text-white border border-neutral-800"
-                }`}
-              >
-                {mkt === "all" ? "All Markets" : mkt}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Case Studies Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {filteredStudies.map((study, idx) => (
-            <RevealOnScroll key={study.slug} delay={idx * 0.1}>
-              <Card className="h-full flex flex-col justify-between overflow-hidden border-neutral-800 bg-neutral-900/30 hover:border-neutral-700 transition-all p-0 group">
-                <div className="p-8 space-y-6">
-                  {/* Market & Industry Tags */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono text-neutral-400 uppercase tracking-wider">
-                      {study.client}
-                    </span>
-                    <Badge variant="outline" className="text-[10px]">
-                      {study.market} • {study.industry}
-                    </Badge>
-                  </div>
-
-                  {/* Title & Tagline */}
-                  <h3 className="text-xl font-bold text-white group-hover:text-amber-300 transition-colors leading-snug">
-                    {study.title}
-                  </h3>
-                  <p className="text-xs text-neutral-400 leading-relaxed">
-                    {study.tagline}
-                  </p>
-
-                  {/* Results Highlights */}
-                  <div className="grid grid-cols-3 gap-2 pt-4 border-t border-neutral-800/80">
-                    {study.results.map((res, rIdx) => (
-                      <div key={rIdx} className="space-y-1">
-                        <span className="block text-lg font-mono font-bold text-amber-400">
-                          {res.value}
-                        </span>
-                        <span className="block text-[10px] uppercase tracking-wider text-neutral-500">
-                          {res.label}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Card Action Link */}
-                <div className="p-6 bg-neutral-950/60 border-t border-neutral-800/60 flex items-center justify-between">
-                  <Link
-                    href={`/work/${study.slug}`}
-                    className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-amber-400 group-hover:text-amber-300 transition-colors"
-                  >
-                    View Case Narrative
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </Link>
-                  <span className="text-[10px] font-mono text-neutral-500">
-                    VERIFIED DATA
-                  </span>
-                </div>
-              </Card>
-            </RevealOnScroll>
+    <div ref={containerRef} className="w-full relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start
+      ">
+        
+        {/* COLUMN 1: Normal Velocity */}
+        <div ref={col1Ref} className="flex flex-col gap-16 lg:gap-24 will-change-transform max-w-md">
+          {col1Projects.map((study) => (
+            <ProjectCard key={study.slug} study={study} />
           ))}
         </div>
 
-        {/* View All Work Link */}
-        <div className="text-center pt-6">
-          <Link href="/work">
-            <Button variant="secondary" size="md">
-              Explore All Client Case Studies
-            </Button>
-          </Link>
+        {/* COLUMN 2: Faster Velocity Parallax */}
+        <div ref={col2Ref} className="flex flex-col gap-16 lg:gap-24 lg:pt-32 will-change-transform max-w-md">
+          {col2Projects.map((study) => (
+            <ProjectCard key={study.slug} study={study} />
+          ))}
         </div>
       </div>
-    </section>
+    </div>
+  );
+}
+
+function ProjectCard({ study }: { study: CaseStudy }) {
+  return (
+    <Link href={`/work/${study.slug}`} className="group block w-full reveal-row opacity-0 translate-y-12">
+      {/* 3/4 Ratio Image Container */}
+      <div className="relative w-full aspect-[3/4] overflow-hidden rounded-[2rem] bg-neutral-900 border border-white/10 mb-6">
+        <WaterImage src={study.coverImage} alt={study.title} className="absolute inset-0 w-full h-full object-cover" />
+        
+        {/* Floating View Project Badge */}
+        <div className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none">
+           <span className="flex items-center gap-2 bg-white text-black font-spacegrotesk text-xs tracking-widest uppercase px-4 py-2 rounded-full">
+             View Case <ArrowUpRight className="w-4 h-4" />
+           </span>
+        </div>
+      </div>
+
+      {/* Project Meta - Name, line, description */}
+      <div className="flex flex-col">
+        {/* Title & Market */}
+        <div className="flex items-end justify-between pb-4">
+          <h3 className="font-spacegrotesk text-3xl sm:text-4xl font-medium text-white group-hover:text-amber-300 transition-colors tracking-tight leading-none">
+            {study.client}
+          </h3>
+          <span className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest leading-none mb-1">
+            {study.market}
+          </span>
+        </div>
+        
+        {/* Full width line divider */}
+        <div className="w-full h-px bg-white/10 mb-4 group-hover:bg-white/30 transition-colors" />
+        
+        {/* Description & Results */}
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+          <p className="font-archivo text-neutral-400 text-sm max-w-sm">
+            {study.tagline}
+          </p>
+          
+          <div className="flex gap-6 shrink-0">
+            {study.results.slice(0, 1).map((res, idx) => (
+              <div key={idx} className="flex flex-col items-start sm:items-end">
+                <span className="font-mono text-lg text-white font-bold">{res.value}</span>
+                <span className="font-mono text-[10px] text-neutral-500 uppercase tracking-widest">{res.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </Link>
   );
 }

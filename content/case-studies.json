@@ -1,53 +1,158 @@
 [
   {
-    "slug": "aurum-atelier",
-    "title": "Scaling Luxury Horology E-Commerce to $42M ARR",
-    "client": "Aurum Atelier",
-    "industry": "Luxury & Retail",
-    "market": "UAE",
-    "coverImage": "/images/work-aurum.jpg",
+    "slug": "cisco-transformation",
+    "title": "Enterprise Networking Architecture",
+    "client": "Cisco",
+    "industry": "Enterprise Tech",
+    "market": "Global",
+    "coverImage": "/images/work/Cisco.webp",
     "results": [
-      { "label": "Revenue Growth", "value": "+340%" },
-      { "label": "Blended ROAS", "value": "6.8x" },
-      { "label": "Avg Order Value", "value": "$4,200" }
+      { "label": "Revenue Growth", "value": "+120%" },
+      { "label": "Market Share", "value": "+15%" }
     ],
-    "tagline": "Brand repositioning and high-net-worth acquisition architecture across Dubai & North America.",
-    "challenge": "Aurum Atelier had exquisite handcrafted timepieces but was suffering from rising customer acquisition costs and low digital trust among ultra-high-net-worth collectors in the GCC.",
-    "approach": "We engineered an editorial digital experience combined with private concierge remarketing flows, targeted search arbitrage, and cinematic programmatic media.",
-    "outcome": "In 14 months, direct-to-consumer sales grew from $9.5M to over $42M, establishing Aurum Atelier as a premier digital-first horology maison."
+    "tagline": "Digital transformation for a global technology leader."
   },
   {
-    "slug": "veridian-health",
-    "title": "Dominating Enterprise Digital Health in North America",
-    "client": "Veridian Health",
-    "industry": "HealthTech & Enterprise",
+    "slug": "daoway-growth",
+    "title": "Scaling Digital Ecosystems",
+    "client": "DaoWay",
+    "industry": "Web3 & Blockchain",
     "market": "US",
-    "coverImage": "/images/work-veridian.jpg",
+    "coverImage": "/images/work/DaoWay.webp",
     "results": [
-      { "label": "Enterprise Pipeline", "value": "$85M+" },
-      { "label": "CAC Reduction", "value": "-52%" },
-      { "label": "Organic Inbound", "value": "+410%" }
+      { "label": "Active Users", "value": "1.2M+" },
+      { "label": "CAC Reduction", "value": "-40%" }
     ],
-    "tagline": "Outcome-driven demand generation and category positioning for healthcare SaaS.",
-    "challenge": "Veridian faced legacy enterprise incumbents with 10x marketing budgets and needed to capture hospital system procurement committees quickly.",
-    "approach": "We deployed an account-based growth framework, high-authority research papers, and technical SEO infrastructure converting hospital CIOs at peak decision cycles.",
-    "outcome": "Closed 28 Fortune 500 healthcare provider contracts within 3 quarters and cut sales cycle velocity by 38 days."
+    "tagline": "Next-generation community building and decentralized growth."
   },
   {
-    "slug": "solaris-capital",
-    "title": "Institutional Capital Acquisition for Greentech Infrastructure",
-    "client": "Solaris Capital Partners",
-    "industry": "FinTech & Climate",
-    "market": "Canada",
-    "coverImage": "/images/work-solaris.jpg",
+    "slug": "flipaclip-creators",
+    "title": "Empowering Mobile Animation",
+    "client": "FlipaClip",
+    "industry": "Consumer App",
+    "market": "Global",
+    "coverImage": "/images/work/FlipaClip.webp",
     "results": [
-      { "label": "Fund Commitments", "value": "$620M" },
-      { "label": "LP Engagement", "value": "+185%" },
-      { "label": "Global Reach", "value": "18 Countries" }
+      { "label": "Downloads", "value": "50M+" },
+      { "label": "Engagement", "value": "3x" }
     ],
-    "tagline": "Positioning sustainable infrastructure as high-yield institutional asset classes.",
-    "challenge": "Solaris was raising their flagship Fund II and required institutional grade positioning to attract sovereign wealth and family office allocations.",
-    "approach": "We created a data-dense interactive digital investor suite, combined with bespoke digital PR and precision LinkedIn executive thought-leadership syndication.",
-    "outcome": "Fund II was oversubscribed within 5 months, closing at $620M against a $500M target."
+    "tagline": "Redefining the creator economy on mobile devices."
+  },
+  {
+    "slug": "kelvin-zero",
+    "title": "Advanced Cybersecurity Protocols",
+    "client": "Kelvin Zero",
+    "industry": "Cybersecurity",
+    "market": "Europe",
+    "coverImage": "/images/work/KelvinZero.webp",
+    "results": [
+      { "label": "Enterprise Deals", "value": "$15M+" },
+      { "label": "Lead Velocity", "value": "+210%" }
+    ],
+    "tagline": "Securing critical infrastructure for modern enterprises."
+  },
+  {
+    "slug": "magma-design",
+    "title": "Immersive 3D Collaboration",
+    "client": "Magma",
+    "industry": "Design Tech",
+    "market": "North America",
+    "coverImage": "/images/work/Magma.webp",
+    "results": [
+      { "label": "Daily Active", "value": "200k+" },
+      { "label": "Retention", "value": "85%" }
+    ],
+    "tagline": "The ultimate collaborative canvas for digital artists."
+  },
+  {
+    "slug": "nurse-ce-club",
+    "title": "Digital Education Infrastructure",
+    "client": "Nurse CE Club",
+    "industry": "EdTech",
+    "market": "US",
+    "coverImage": "/images/work/NurseCeClub.webp",
+    "results": [
+      { "label": "Course Completions", "value": "500k+" },
+      { "label": "LTV Increase", "value": "+45%" }
+    ],
+    "tagline": "Streamlined continuing education for healthcare professionals."
+  },
+  {
+    "slug": "potion-video",
+    "title": "AI Video Sales Acceleration",
+    "client": "Potion",
+    "industry": "AI & SalesTech",
+    "market": "North America",
+    "coverImage": "/images/work/Potion.webp",
+    "results": [
+      { "label": "Meeting Booked", "value": "+310%" },
+      { "label": "ROI", "value": "12x" }
+    ],
+    "tagline": "Personalized video outreach at scale."
+  },
+  {
+    "slug": "qvino-fintech",
+    "title": "Streamlined Financial Operations",
+    "client": "Qvino",
+    "industry": "FinTech",
+    "market": "LATAM",
+    "coverImage": "/images/work/Qvino.webp",
+    "results": [
+      { "label": "Transaction Volume", "value": "$1.2B" },
+      { "label": "User Growth", "value": "+180%" }
+    ],
+    "tagline": "Redefining digital banking experiences for emerging markets."
+  },
+  {
+    "slug": "riyadh-season",
+    "title": "Global Entertainment Dominance",
+    "client": "Riyadh",
+    "industry": "Entertainment & Events",
+    "market": "UAE & GCC",
+    "coverImage": "/images/work/Riyadh.webp",
+    "results": [
+      { "label": "Ticket Sales", "value": "15M+" },
+      { "label": "Brand Reach", "value": "1.5B+" }
+    ],
+    "tagline": "Orchestrating digital awareness for the world's largest festival."
+  },
+  {
+    "slug": "sleepiest-health",
+    "title": "Consumer Sleep Optimization",
+    "client": "Sleepiest",
+    "industry": "Health & Wellness",
+    "market": "Global",
+    "coverImage": "/images/work/Sleepiest.webp",
+    "results": [
+      { "label": "Subscriptions", "value": "+400%" },
+      { "label": "App Store Rank", "value": "#1" }
+    ],
+    "tagline": "Building habit-forming wellness journeys."
+  },
+  {
+    "slug": "sweeping-corp",
+    "title": "B2B Infrastructure Growth",
+    "client": "Sweeping Corp",
+    "industry": "Industrial Services",
+    "market": "US",
+    "coverImage": "/images/work/SweepingCorpOfAmerica.webp",
+    "results": [
+      { "label": "Contract Value", "value": "$80M+" },
+      { "label": "CPA", "value": "-65%" }
+    ],
+    "tagline": "Digital acquisition for heavy infrastructure services."
+  },
+  {
+    "slug": "zelt-hr",
+    "title": "Modernizing HR Systems",
+    "client": "Zelt",
+    "industry": "HR Tech",
+    "market": "Europe",
+    "coverImage": "/images/work/Zelt.webp",
+    "results": [
+      { "label": "ARR Growth", "value": "+280%" },
+      { "label": "Activation", "value": "92%" }
+    ],
+    "tagline": "The unified workspace for modern teams."
   }
 ]

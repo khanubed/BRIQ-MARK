@@ -9,7 +9,10 @@ import {
   setErrorMessage,
   resetContactForm,
 } from "../../../store/slices/contactSlice";
-import { SmoothInput, Textarea } from "../../../components/ui/skiper-ui/skiper106";
+import {
+  SmoothInput,
+  Textarea,
+} from "../../../components/ui/skiper-ui/skiper106";
 import TextRoll from "../../../components/ui/skiper-ui/skiper58";
 import { trackEvent } from "../../../lib/analytics";
 import { CheckCircle2, Paperclip } from "lucide-react";
@@ -110,10 +113,15 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-12 w-full max-w-full mr-auto text-left">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-12 w-full max-w-full mr-auto text-left"
+    >
       {/* 1. Services Pills */}
       <div className="space-y-6">
-        <h3 className="text-2xl font-medium text-white font-archivo">I'm interested in...</h3>
+        <h3 className="text-2xl font-medium text-white font-archivo">
+          I'm interested in...
+        </h3>
         <div className="flex flex-wrap gap-3 justify-start">
           {availableServices.map((service) => {
             const isSelected = contact.servicesNeeded.includes(service);
@@ -126,7 +134,7 @@ export function ContactForm() {
                   "px-8 py-4 rounded-full text-lg border transition-all duration-300 font-archivo",
                   isSelected
                     ? "bg-white text-black border-white"
-                    : "bg-transparent text-white border-white/20 hover:border-white"
+                    : "bg-transparent text-white border-white/20 hover:border-white",
                 )}
               >
                 <TextRoll>{service}</TextRoll>
@@ -138,22 +146,25 @@ export function ContactForm() {
 
       {/* 2. Target Market Pills */}
       <div className="space-y-6">
-        <h3 className="text-2xl font-medium text-white font-archivo">Primary Market Focus</h3>
+        <h3 className="text-2xl font-medium text-white font-archivo">
+          Primary Market Focus
+        </h3>
         <div className="flex flex-wrap gap-3 justify-start">
           {targetMarkets.map((market) => (
             <button
               type="button"
               key={market}
-              onClick={() => dispatch(setFormField({ field: "targetMarket", value: market }))}
+              onClick={() =>
+                dispatch(setFormField({ field: "targetMarket", value: market }))
+              }
               className={cn(
                 "px-8 py-4 rounded-full text-lg border transition-all duration-300 font-archivo",
                 contact.targetMarket === market
                   ? "bg-white text-black border-white"
-                  : "bg-transparent text-white border-white/20 hover:border-white"
+                  : "bg-transparent text-white border-white/20 hover:border-white",
               )}
-            ><TextRoll>
-              {market === "Other" ? "Global" : market}
-              </TextRoll>
+            >
+              <TextRoll>{market === "Other" ? "Global" : market}</TextRoll>
             </button>
           ))}
         </div>
@@ -166,15 +177,26 @@ export function ContactForm() {
             placeholder="Your name *"
             value={contact.fullName}
             onChange={(e: any) =>
-              dispatch(setFormField({ field: "fullName", value: e.target.value }))
+              dispatch(
+                setFormField({ field: "fullName", value: e.target.value }),
+              )
             }
             wrapperClassName="max-w-full bg-transparent p-0 rounded-none border-none focus-within:outline-none"
             className="text-white placeholder:text-neutral-500 font-archivo text-xl md:text-2xl py-3 px-0 text-left bg-transparent outline-none focus:outline-none ring-0 border-none relative z-10"
           />
           <div className="absolute bottom-[-10px] left-0 right-0 w-full z-20">
-            <GuitarString height={40} activeColor="#ffffff" strokeColor="rgba(255,255,255,0.4)" showEndpoints={false} />
+            <GuitarString
+              height={40}
+              activeColor="#ffffff"
+              strokeColor="rgba(255,255,255,0.4)"
+              showEndpoints={false}
+            />
           </div>
-          {localErrors.fullName && <p className="text-base font-archivo text-red-500 text-left mt-2 relative z-30">{localErrors.fullName}</p>}
+          {localErrors.fullName && (
+            <p className="text-base font-archivo text-red-500 text-left mt-2 relative z-30">
+              {localErrors.fullName}
+            </p>
+          )}
         </div>
 
         <div className="relative group pt-4">
@@ -189,9 +211,18 @@ export function ContactForm() {
             className="text-white placeholder:text-neutral-500 font-archivo text-xl md:text-2xl py-3 px-0 text-left bg-transparent outline-none focus:outline-none ring-0 border-none relative z-10"
           />
           <div className="absolute bottom-[-10px] left-0 right-0 w-full z-20">
-            <GuitarString height={40} activeColor="#ffffff" strokeColor="rgba(255,255,255,0.4)" showEndpoints={false} />
+            <GuitarString
+              height={40}
+              activeColor="#ffffff"
+              strokeColor="rgba(255,255,255,0.4)"
+              showEndpoints={false}
+            />
           </div>
-          {localErrors.email && <p className="text-base text-red-500 font-archivo text-left mt-2 relative z-30">{localErrors.email}</p>}
+          {localErrors.email && (
+            <p className="text-base text-red-500 font-archivo text-left mt-2 relative z-30">
+              {localErrors.email}
+            </p>
+          )}
         </div>
 
         <div className="relative group pt-4">
@@ -199,15 +230,26 @@ export function ContactForm() {
             placeholder="Company Name *"
             value={contact.company}
             onChange={(e: any) =>
-              dispatch(setFormField({ field: "company", value: e.target.value }))
+              dispatch(
+                setFormField({ field: "company", value: e.target.value }),
+              )
             }
             wrapperClassName="max-w-full bg-transparent p-0 rounded-none border-none focus-within:outline-none"
             className="text-white placeholder:text-neutral-500 font-archivo text-xl md:text-2xl py-3 px-0 text-left bg-transparent outline-none focus:outline-none ring-0 border-none relative z-10"
           />
           <div className="absolute bottom-[-10px] left-0 right-0 w-full z-20">
-            <GuitarString height={40} activeColor="#ffffff" strokeColor="rgba(255,255,255,0.4)" showEndpoints={false} />
+            <GuitarString
+              height={40}
+              activeColor="#ffffff"
+              strokeColor="rgba(255,255,255,0.4)"
+              showEndpoints={false}
+            />
           </div>
-          {localErrors.company && <p className="text-base font-archivo text-red-500 text-left mt-2 relative z-30">{localErrors.company}</p>}
+          {localErrors.company && (
+            <p className="text-base font-archivo text-red-500 text-left mt-2 relative z-30">
+              {localErrors.company}
+            </p>
+          )}
         </div>
 
         <div className="relative group pt-8">
@@ -215,35 +257,45 @@ export function ContactForm() {
             placeholder="Tell us about your project"
             value={contact.message}
             onChange={(e: any) =>
-              dispatch(setFormField({ field: "message", value: e.target.value }))
+              dispatch(
+                setFormField({ field: "message", value: e.target.value }),
+              )
             }
             wrapperClassName="max-w-full bg-transparent p-0 rounded-none border-none focus-within:outline-none min-h-[80px]"
             className="text-white placeholder:text-neutral-500 font-archivo text-xl md:text-2xl py-3 px-0 text-left bg-transparent outline-none focus:outline-none ring-0 border-none relative z-10 min-h-[80px]"
           />
           <div className="absolute bottom-[-20px] left-0 right-0 w-full z-20">
-            <GuitarString height={40} activeColor="#ffffff" strokeColor="rgba(255,255,255,0.4)" showEndpoints={false} />
+            <GuitarString
+              height={40}
+              activeColor="#ffffff"
+              strokeColor="rgba(255,255,255,0.4)"
+              showEndpoints={false}
+            />
           </div>
         </div>
       </div>
 
       {/* 4. Budget Pills */}
       <div className="space-y-6 pt-4">
-        <h3 className="text-2xl font-medium text-white font-archivo">Project budget (USD)</h3>
+        <h3 className="text-2xl font-medium text-white font-archivo">
+          Project budget (USD)
+        </h3>
         <div className="flex flex-wrap gap-3 justify-start">
           {budgetTiers.map((tier) => (
             <button
               type="button"
               key={tier}
-              onClick={() => dispatch(setFormField({ field: "budgetTier", value: tier }))}
+              onClick={() =>
+                dispatch(setFormField({ field: "budgetTier", value: tier }))
+              }
               className={cn(
                 "px-8 py-4 rounded-full text-lg border transition-all duration-300 font-archivo",
                 contact.budgetTier === tier
                   ? "bg-white text-black border-white"
-                  : "bg-transparent text-white border-white/20 hover:border-white"
+                  : "bg-transparent text-white border-white/20 hover:border-white",
               )}
-            ><TextRoll>
-              {tier}
-              </TextRoll>
+            >
+              <TextRoll>{tier}</TextRoll>
             </button>
           ))}
         </div>
@@ -251,13 +303,18 @@ export function ContactForm() {
 
       {/* 5. Attachment & Submit */}
       <div className="space-y-10 pt-4 flex flex-col items-start">
-        <button type="button" className="flex flex-row items-center gap-2 text-white hover:text-neutral-300 transition-colors font-archivo font-medium text-lg">
+        <button
+          type="button"
+          className="flex flex-row items-center gap-2 text-white hover:text-neutral-300 transition-colors font-archivo font-medium text-lg"
+        >
           <Paperclip className="w-5 h-5" />
           Add attachment
         </button>
 
         {contact.errorMessage && (
-          <p className="text-base text-red-500 font-archivo text-left">{contact.errorMessage}</p>
+          <p className="text-base text-red-500 font-archivo text-left">
+            {contact.errorMessage}
+          </p>
         )}
 
         <button
