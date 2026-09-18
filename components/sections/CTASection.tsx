@@ -17,8 +17,8 @@ export function CTASection({ theme = "dark" }: CTASectionProps) {
   
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [displayText, setDisplayText] = useState(PHRASES[0]);
-  const intervalRef = useRef<NodeJS.Timeout>();
-  const scrambleRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const scrambleRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {

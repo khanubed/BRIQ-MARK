@@ -14,6 +14,20 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
+export interface WorkProject {
+  id: string;
+  number: string;
+  title: string;
+  client: string;
+  category: string;
+  market: string;
+  image: string;
+  slug: string;
+  metricValue: string;
+  metricLabel: string;
+  accentColor: string;
+}
+
 import caseStudies from "../../content/case-studies.json";
 
 // We'll map the case studies into the WorkProject format expected by WorkSection

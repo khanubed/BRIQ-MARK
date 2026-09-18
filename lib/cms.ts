@@ -62,7 +62,7 @@ export async function getCaseStudyBySlug(
 }
 
 export async function getServices(): Promise<ServiceCapability[]> {
-  return servicesData as ServiceCapability[];
+  return servicesData as unknown as ServiceCapability[];
 }
 
 export async function getTestimonials(): Promise<Testimonial[]> {
