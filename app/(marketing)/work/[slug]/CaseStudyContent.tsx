@@ -92,7 +92,7 @@ export function CaseStudyContent() {
           </div>
 
           {/* Massive Typography */}
-          <h1 className="font-spacegrotesk font-black tracking-tighter text-[12vw] leading-[0.85] uppercase text-white mb-6">
+          <h1 className="font-archivo  tracking-tighter text-[12vw] leading-[0.85] uppercase text-white mb-6">
             Consumer <br /> <span className="text-amber-400">Voice</span>
           </h1>
         </div>
@@ -115,7 +115,7 @@ export function CaseStudyContent() {
           
           {/* Left Text */}
           <div className="lg:col-span-5 space-y-8">
-            <h2 className="font-spacegrotesk text-3xl sm:text-5xl font-medium tracking-tight">
+            <h2 className="font-archivo text-3xl sm:text-5xl font-medium tracking-tight">
               The Brief
             </h2>
             <div className="w-full h-px bg-white/10" />
@@ -148,6 +148,21 @@ export function CaseStudyContent() {
                <img src="/images/casestudy/logo-icon-portait.webp" alt="Logo Icon" className="w-full h-full object-cover" />
              </div>
           </div>
+        </div>
+      </section>
+
+      {/* STRATEGIC APPROACH TEXT SECTION */}
+      <section className="px-6 sm:px-12 lg:px-20 py-16 sm:py-24 bg-[#08080a]">
+        <div className="max-w-4xl mx-auto space-y-8 text-center">
+          <span className="text-[10px] font-spacegrotesk text-amber-400 uppercase tracking-widest block">
+            Strategic Approach
+          </span>
+          <h3 className="font-archivo text-3xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-tight">
+            Building trust through transparency in an ecosystem saturated with noise.
+          </h3>
+          <p className="font-archivo text-lg text-neutral-400 font-light leading-relaxed max-w-2xl mx-auto pt-6">
+            We architected a platform that intrinsically filters out fraudulent reviews, prioritizing authenticated buyers and verified product experiences. By integrating an intuitive categorization engine, customers can seamlessly cross-reference genuine feedback and navigate directly to secure Amazon checkouts without second-guessing their purchasing decisions.
+          </p>
         </div>
       </section>
 
@@ -209,7 +224,7 @@ export function CaseStudyContent() {
             {[...Array(6)].map((_, i) => (
               <h2 
                 key={i} 
-                className="font-spacegrotesk font-black text-[15vw] leading-none uppercase tracking-tighter text-white/10 group-hover:text-white transition-colors duration-500"
+                className="font-archivo  text-[15vw] leading-none uppercase tracking-tighter text-white/10 group-hover:text-white transition-colors duration-500"
               >
                 Next Project — 
               </h2>
@@ -219,7 +234,7 @@ export function CaseStudyContent() {
         
         {/* Hover image preview center */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 aspect-[3/4] overflow-hidden rounded-2xl opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-700 pointer-events-none z-10 shadow-[0_0_100px_rgba(255,255,255,0.05)] border border-white/10">
-           <WaterImage src="/images/casestudy/landscape.webp" alt="Next Project" className="w-full h-full object-cover" />
+           <img  src="/images/casestudy/landscape.webp" alt="Next Project" className="w-full h-full object-cover" />
         </div>
 
       </section>
