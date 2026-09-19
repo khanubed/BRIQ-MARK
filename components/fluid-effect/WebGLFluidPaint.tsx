@@ -1296,13 +1296,16 @@ export default function WebGLFluidPaint({
       const rect = canvasEl.getBoundingClientRect();
       const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
       const touches = e.targetTouches;
-      while (touches.length >= pointers.length) {
-        pointers.push(new Pointer());
-      }
+      
       for (let i = 0; i < touches.length; i++) {
+        let pointer = pointers.find((p) => p.id === touches[i].identifier);
+        if (!pointer) {
+          pointer = new Pointer();
+          pointers.push(pointer);
+        }
         const posX = (touches[i].clientX - rect.left) * pixelRatio;
         const posY = (touches[i].clientY - rect.top) * pixelRatio;
-        updatePointerDownData(pointers[i + 1], touches[i].identifier, posX, posY);
+        updatePointerDownData(pointer, touches[i].identifier, posX, posY);
       }
       splatStack.push(config.CLICK_SPLATS);
     };
@@ -1312,7 +1315,7 @@ export default function WebGLFluidPaint({
       const pixelRatio = Math.min(window.devicePixelRatio || 1, 2);
       const touches = e.targetTouches;
       for (let i = 0; i < touches.length; i++) {
-        const pointer = pointers[i + 1];
+        const pointer = pointers.find((p) => p.id === touches[i].identifier);
         if (!pointer || !pointer.down) continue;
         const posX = (touches[i].clientX - rect.left) * pixelRatio;
         const posY = (touches[i].clientY - rect.top) * pixelRatio;
